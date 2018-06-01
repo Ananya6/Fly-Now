@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageA.master.cs" Inherits="MasterPageA" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .placeh{
+            height: 60%;
+        }
+        
+        .parent_menu {
+            width: 140px;
+            background-color:rgba(244, 162, 92,0.95)   ;//#1fa5c6;//whitesmoke;//white;//rgba(28, 51, 89,0.6);// rgba(255, 124, 106,0.8);//rgba(221, 124, 106,0.7);//rgba(221, 89, 95,0.8);//#0B3C5D;// #CD5630;// #B37D4e;//#18121E;//#747a84;//rgb(190, 49, 91);//#8AE0F2;#DCB239;//;
+            color:  white;//#383636;
+            text-align: center;
+            font-family: 'Open Sans',Verdana;
+            height: 35px;
+            line-height: 30px;
+            margin-right: 5px;
+        }
+
+        .child_menu {
+            width: 140px;
+            background-color: #c66d21;//#000;
+            color: #fff;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+
+            }
+        .sub_menu {
+            width: 150px;
+            background-color: #000;
+            color: #c66d21;//#fff;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 5px;
+        }
+
+        .selected_menu {
+            background-color: palevioletred;
+            // #FF6600;
+        }
+
+        .hover_menu {
+            background-color: #c66d21;//#990000;
+            color: azure ;
+        }
+        .main_menu{
+            //margin-left: auto;
+            //margin-right: 0;
+            //display: block;
+           // right: 0;
+            //width: 50%;
+            //top: 0;
+            //position: fixed;
+            float: right!important;
+            //clear: left;
+
+        }
+        .btnlogin{
+            float: right;
+            
+        }
+        .in{
+            display: inline-block;
+            
+            color: #dba562;// white;
+        }
+        .bodyc{
+            background-color: whitesmoke;
+        }
+        .lt{
+
+        }
+
+        
+        
+
+        .auto-style4 {
+            padding-top: 30px;
+            width: 197px;
+            height: 107px;
+        }
+
+    </style>
+</head>
+<body class="bodyc">
+
+    <form id="form1" runat="server">
+        
+    <div>
+        <table style="width:100%;">
+            
+            
+            <tr>
+                <td rowspan="2" >
+<img src="logobent.png" class="auto-style4" /></td>
+        <td class="rt"><asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" class="main_menu">
+<LevelMenuItemStyles>
+<asp:MenuItemStyle CssClass="parent_menu" />
+</LevelMenuItemStyles>
+<LevelSelectedStyles>
+<asp:MenuItemStyle CssClass="child_menu" />
+</LevelSelectedStyles>
+<DynamicMenuItemStyle CssClass="sub_menu" />
+<DynamicHoverStyle CssClass="hover_menu" />
+<StaticSelectedStyle CssClass="selected_menu" />
+<StaticHoverStyle CssClass="hover_menu" />
+
+</asp:Menu></td>
+        
+                </tr>  
+            
+            <tr>
+        <td class="btnlogin"> <asp:LinkButton ID="LkBtn" runat="server" OnClick="LkBtn_Click" CssClass="in" >Log In</asp:LinkButton>
+    <asp:LinkButton ID="LkBtnOut" runat="server" style="margin-left:2%" visible="false" CssClass="in" OnClick="LkBtnOut_Click">LogOut</asp:LinkButton></td>
+        
+                </tr>  
+            
+            <tr >
+        <td colspan="2"> 
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+              
+                </td>
+        
+                </tr> 
+            <tr>
+                <td><asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+<asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" /></td>
+            </tr> 
+            
+            </table>
+    </div>
+              
+        
+            
+    </form>
+      
+</body>
+</html>
