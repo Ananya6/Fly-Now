@@ -1,0 +1,16 @@
+﻿
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+<siteMapNode url="" title=""  description="">
+<siteMapNode url="main.aspx" title="Home" description="">
+  </siteMapNode>
+
+<siteMapNode url="Default.aspx" title="Support" description="24X7 Support">
+<siteMapNode url="MyFlights.aspx" title="My Flights"  description="View your bookings" />
+
+</siteMapNode>
+
+<siteMapNode url="cancellation.aspx" title="Flight Cancel"   />
+</siteMapNode>
+
+</siteMap>
