@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageAdmin.master.cs" Inherits="MasterPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        *{
+            box-sizing:border-box;
+        }
+        .sidemenu{
+            float:left;
+            background-color:#206893;
+            width: 30%;
+            display:inline-block;
+        }
+        .placeh{
+            width:70%;
+            display: inline-block;
+        }
+        .menu{
+            display: block;
+            background-color:#2e81b2;
+            margin: 3%;
+            padding: 2%;
+            color: white;
+            font-weight: 500;
+            //box-shadow: 10px 10px 5px #888888;
+            border: 2px solid #1a5f89;
+            border-radius: 8px;
+        }
+        .link{
+            color : #fff;
+           text-decoration: none;
+           cursor: pointer;
+        }
+       
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <br />
+        <div class="sidemenu">
+            <div class="menu"><a href="InsertCity.aspx" class="link" >Insert City</a></div>
+            <div class="menu"><a href="InsertFlights.aspx" class="link">Insert Flights</a></div>
+            <div class="menu"><a href="InsertAirline.aspx" class="link">Insert Destination</a></div>
+            <div class="menu"><a href="" class="link">Update Flights</a></div>
+            </div>
+        <div class="placeh">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"  >
+        
+        </asp:ContentPlaceHolder>
+        
+            </div>
+
+
+    </div>
+    </form>
+</body>
+</html>
